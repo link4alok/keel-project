@@ -1,0 +1,41 @@
+$simpleBorder: 1px solid black;
+@mixin borderRBL {
+    border-left: $simpleBorder;
+    border-right: $simpleBorder;
+    border-bottom: $simpleBorder;
+}
+@mixin arialCenter {
+        text-align: center;
+        font-family: Arial;
+}
+#chartHolder {
+    border-left: $simpleBorder;
+    border-right: $simpleBorder;
+    background: #FFFFFF;
+    #headerChartDiv {
+        @include arialCenter;
+        padding: 30px 0 30px 0;
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    #noOrderMessage {
+        @include arialCenter;
+        font-size: 0.9em;
+        border: 1px dotted silver;
+    }
+
+    
+}
+#footer {
+    height: 32px;
+    background: #E0E0E0;
+    @include borderRBL;
+}
+
+.ieMessage{
+    text-align: center;
+    @include borderRBL;
+
+}
+
+@import "chartLegend";

@@ -1,0 +1,98 @@
+//variable declaration
+$fontSize: 13px;
+
+
+	#openDiv{
+		#inputDiv{
+			font-size: 13px;
+			font-family: Arial;
+			height: 80px;
+			margin-left:20px;
+		}
+		#btnDiv{
+			width: 170px;
+			float: right;
+			padding-top: 15px;
+		}
+		#divLine{
+			background-color: #C0C0C0;
+			width:auto;
+			height: 2px;			
+		}
+		#createBtn{
+			background-color: #C0C0C0;
+			border-radius: 0px;
+			font-size: 12px;
+			font-family: Arial;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-weight: bold;
+		}
+		#cancelBtn{
+			background-color: #C0C0C0;
+			border-radius: 0px;
+			font-size: 12px;
+			font-family: Arial;
+			padding: 5px;
+			padding-left: 10px;
+			padding-right: 10px;
+			font-weight: bold;
+		}
+		#errorMesg{
+			color: #FF0000;
+			font-style: italic;
+		}
+	}
+	
+	.ui-corner-all,
+	.ui-corner-top,
+	.ui-corner-left,
+	.ui-corner-tl{
+		border-top-left-radius: 0px;
+	}
+	.ui-corner-all,
+	.ui-corner-top,
+	.ui-corner-right,
+	.ui-corner-tr{
+		border-top-right-radius: 0px;
+	}
+	.ui-corner-all,
+	.ui-corner-bottom,
+	.ui-corner-left,
+	.ui-corner-bl{
+		border-bottom-left-radius: 0px;
+	}
+	.ui-corner-all,
+	.ui-corner-bottom,
+	.ui-corner-right,
+	.ui-corner-br{
+		border-bottom-right-radius: 0px;
+	}
+	.ui-widget-header{
+		background-color: #C0CC0;
+	}
+	.ui-dialog{
+		padding: 0px;
+	}
+	#ui-id-1{
+		font-size: 15px;
+		font-family: Arial;
+	}
+
+	.ui-dialog .ui-dialog-content{
+		padding: 0px;
+	}
+	
+	.ui-state-default .ui-icon {
+		background-image: url(images/ui-icons_888888_256x240.png);
+	}
+	.ui-widget-header .ui-icon {
+		background-image: url(images/ui-icons_222222_256x240.png);
+	}
+	.ui-icon, .ui-widget-content .ui-icon {
+		background-image: url(images/ui-icons_222222_256x240.png);
+	}
+	.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.ui-front,.ui-draggable{
+    	z-index:1000;
+    }

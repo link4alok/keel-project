@@ -1,0 +1,151 @@
+// #chart{
+// 	width: 70%;
+// 	height: 500px;
+// 	background-color: #FFFF00;
+// 	display:inline-block;
+// }
+#legends{
+	width: 100px;
+	height: 100px;
+	display:inline-block;
+	vertical-align: top;
+
+	#legend1, #legend2, #legend3,{
+		padding: 3.4px;
+	}
+	.legendDiv{
+		width: 10px;
+		height: 10px;
+		display:inline-block;
+	}
+	#legend1Div{
+		background-color: #FFF4CE;
+	}
+	#legend2Div{
+		background-color: #FDBD5A;
+	}
+	#legend3Div{
+		background-color: #FD8300;
+	}
+	.legendText{
+		font-size: 0.9em;
+		margin-left: 6px;
+		font-family: Arial;
+	}
+}
+#legends-tab, #legends-mobile{
+	display: none;
+}
+#chartLegends {
+	position: absolute;
+	top: 170px;
+	left: 85%;
+}
+.yLabelMobile {
+	display: none;
+}
+.barChartSVG {
+	padding: 1px 20px 0px 5px;
+}
+@media all and (max-width : 768px) and ( min-width : 480px ) {
+	#legends{
+		display: none;
+	}
+	#legends-tab{
+		width: 100%;
+		height: 40px;
+		display:inline-block;
+		vertical-align: top;
+		padding-top: 20px;
+
+		#legend1-tab, #legend2-tab, #legend3-tab,{
+			padding: 3.5px;
+			display:inline-block;
+		}
+		.legendDiv-tab{
+			width: 10px;
+			height: 10px;
+			display:inline-block;
+		}
+		#legend1Div-tab{
+			background-color: #FD8300;
+		}
+		#legend2Div-tab{
+			background-color: #FDBD5A;
+		}
+		#legend3Div-tab{
+			background-color: #FFF4CE;
+		}
+		.legendText-tab{
+			font-size: 0.9em;
+			margin-left: 10px;
+			font-family: Arial;
+		}
+	}
+	#chartLegends {
+		position: absolute;
+		top: 100px;
+		left: 48%;
+	}
+	#chartHolder #headerChartDiv {
+		text-align: left;
+		padding-left: 30px;
+	}
+
+}
+@media all and (max-width : 480px) {
+	#legends, #legends-tab{
+		display: none;
+	}
+
+	#legends-mobile{
+		width: 100%;
+		height: 40px;
+		display:inline-block;
+		vertical-align: top;
+		margin-top: 10px;
+		
+		.legendDiv-mobile{
+			width: 10px;
+			height: 10px;
+			display:inline-block;
+		}
+		#legend1Div-mobile{
+			background-color: #FD8300;
+		}
+		#legend2Div-mobile{
+			background-color: #FDBD5A;
+		}
+		#legend3Div-mobile{
+			background-color: #FFF4CE;
+		}
+		.legendText-mobile{
+			font-size: 0.9em;
+			margin-left: 6px;
+			font-family: Arial;
+		}
+	}
+	#chartLegends {
+		position: absolute;
+		top: 90px;
+		left: 60%;
+	}
+	#chartHolder #headerChartDiv {
+		text-align: left;
+		padding: 15px 0px 24px 10px;
+	}
+	.totalValues {
+		display: none;
+	}
+	.yLabelDesktop {
+		display: none;
+	}
+	.yLabelMobile {
+		display: block;
+	}
+}
+@media all and (max-width : 360px) {
+	#chartHolder #headerChartDiv {
+		font-size:1em;
+	}
+}

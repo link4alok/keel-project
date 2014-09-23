@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="assets/css/css.css">
+</head>
+
+<body>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" ></script>	
+	<script src="assets/lib/d3.v3.js"></script>
+	<script src="assets/js/orders.js"></script>
+	<script src="assets/js/barChartUtils.js"></script>
+	<script>
+	barChartUtils.draw(document.body);
+
+
+
+	for (var i in orders) {
+		barChartUtils.addRow(orders[i]);
+	}
+
+
+	barChartUtils.updateRow(newOrders[3])
+
+
+	</script>
+
+</body>
+</html>

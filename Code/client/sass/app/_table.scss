@@ -1,0 +1,147 @@
+$maxMobile : 320px;
+$maxTablet : 768px;
+$fontFamily : Arial;
+$fontSizeTableHead : 14px;
+$fontSizeTableRow : 12px;
+@mixin arialCenter {
+        text-align: center;
+        font-family: Arial;
+}
+$min : 321px;
+$max : 565px;
+
+table {
+    width : 100%;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+th {
+    padding: 8px 0px 8px 0px;
+    background-color : #C0C0C0;
+    font-family : $fontFamily;
+    font-size : $fontSizeTableHead;
+}
+
+td {
+    padding: 8px 0px 8px 0px;
+}
+
+tr {
+    background-color : #FFFFFF;
+    font-family : $fontFamily;
+    font-size : $fontSizeTableRow;
+    text-align : center;
+    border-bottom : 1px solid #C0C0C0;
+}
+
+tr:first-child {
+    border-style : none;
+}
+.column1{
+    width: 5.38%; 
+
+}
+
+.column2{
+    width: 16.13%; 
+    text-align: left;
+
+}
+.column3{
+    width: 6.45%; 
+
+}
+.column4{
+    width: 8.06%; 
+
+}
+.column5{
+    width: 8.06%; 
+    text-align: right;
+
+
+}
+.column6{
+    width: 8.06%; 
+    text-align: right;
+
+}
+.column7{
+    width: 9.68%; 
+    text-align: right;
+
+}
+.column8{
+    width: 10.75%; 
+    text-align: right;
+
+}
+.column9{
+    width: 8.06%; 
+    text-align: right;
+
+}
+.column10{
+    width: 10.75%; 
+
+}
+.column11{
+    width: 8.60%; 
+
+}
+
+.headerTableDiv {
+        @include arialCenter;
+        padding: 30px 0 30px 0;
+        font-size: 16px;
+        font-weight: bold;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        background: #FFFFFF;
+    }
+
+.noOrder {
+        @include arialCenter;
+        font-size: 12px;
+        border: 1px dotted silver;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        background: #FFFFFF;
+    }
+
+@media all and (max-width : $maxMobile) {
+    table {
+            .column2, .column6, .column7, .column10, .column11 {
+                display : none;
+            }
+            .column8, .column5{
+                padding-right : 5px;
+            }
+            th {
+                font-size : 12px;
+            }
+            tr {
+                font-size : 11px;
+            }
+
+
+
+    }
+}
+
+@media all and (min-width : $min) and (max-width : $max) {
+    table {
+            .column2, .column6, .column7 {
+                display : none;
+            }
+    }
+}
+
+@media all and (max-width : $maxTablet) {
+    table {
+            .column9, .column11 {
+                display : none;
+            }
+    }
+}

@@ -1,0 +1,102 @@
+//variable declaration
+$fontSize:                  1em;
+$fontSizeMobile:            0.95em;
+$icon-Active-Color:         #C0C0C0;
+$cursor-on-inactive:        pointer;
+$cursor-on-active:          default;
+$borderBtn:                 1px solid black;
+$max:                       430px;
+
+//assigning properties to toolbar
+#toolBar {
+    width: 100%;
+    padding: 10px;
+    border-right: $borderBtn;
+    border-left: $borderBtn;
+    
+    .toolButton{
+        width: 91px;
+        height: 26px;
+        background-color: $black;
+        color: white;
+        text-align: center;
+        font-size: $fontSize;
+        font-family: Arial;
+        border: $borderBtn;
+        margin-right: 6.6px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        &:hover{
+            background-color: $button-hover-color;
+        }
+    }
+
+    #icons{
+        width: 68px;
+        float: right;
+        display: inline;
+
+        #chartIcon {
+            width: 23px;
+            height: 26px;
+            cursor: $cursor-on-inactive;
+            background: url('../img/chart.png') no-repeat;
+            background-color: $black;
+            background-position: center;
+            float: right;
+            padding-right: 28px;
+
+            &.active{
+                background: url('../img/chartblack.png') no-repeat;
+                background-color: $icon-Active-Color;
+                background-position: center;
+                cursor: $cursor-on-active;
+                padding-right: 28px;
+            }
+        }
+
+        #tableIcon {
+            width: 23px;
+            height: 26px;
+            margin-right: 10px;
+            cursor: $cursor-on-inactive;
+            background: url('../img/table.png') no-repeat;
+            background-color: $black;
+            background-position: center;
+            float: right;
+            padding-right: 28px;
+
+            &.active{
+                background: url('../img/tableblack.png') no-repeat;
+                background-color: $icon-Active-Color;
+                background-position: center;
+                cursor: $cursor-on-active;
+                padding-right: 28px;
+            }
+        }
+    }
+}
+
+//For mobile view
+@media all and (min-width: 0) and (max-width: $max) {
+    #toolBar{
+
+        .toolButton{
+            width: 22%;
+            height: 26px;
+            font-size: $fontSizeMobile;
+            text-align: center;
+            margin-right: 2.6px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            min-width: 50px;
+        }
+        
+        #icons{
+            #tableIcon {
+                margin-right: 6px;
+            } 
+        }
+    }
+}

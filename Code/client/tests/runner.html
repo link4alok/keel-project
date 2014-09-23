@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keel Mocha Tests</title>
+  <link rel="stylesheet" href="libs/mocha.css" />
+  <style>
+  a.otherTests {
+    font-family: Arial;
+    font-size: 0.7em;
+    float:right;
+    color: black;
+    text-decoration: none;
+  }
+  a.otherTests:hover {
+    text-decoration: underline;
+  }
+  a.otherTests:before {
+    content: '>'
+  }
+  </style>
+</head>
+<body>
+  <div id="mocha"></div>
+  <div id="test">
+  <a class="otherTests" href="../tests/runner2.html">Second Set of tests</a>
+  </div>
+
+  <script src="../socket.io/socket.io.js"></script>
+  
+  <!-- Testing Frameworks -->
+  <script src="libs/jquery.min.js"></script>
+  <script src="libs/Modernizr.js"></script>
+  <script src="libs/mocha.js"></script>
+  <script src="libs/chai.js"></script>
+  <script src="libs/sinon-chai.js"></script>
+  <script src="libs/sinon.js"></script>
+
+  <!-- PhantomJS Bridge -->
+  <script src="libs/bridge.js"></script>
+
+  <!-- Common Config -->
+  <script src="../js/config.js"></script>
+
+  <!-- Test Config -->
+  <script src="config.js"></script>
+
+  <!-- RequireJS -->
+  <script data-main="../js/main" src="../js/require-2.1.2.min.js"></script>
+
+  <script>
+    window.expect = chai.expect;
+    window.should = chai.should;
+    window.assert = chai.assert;
+    // $('a').on('click', function () {
+    //   console.log('!aa!');
+    //   location.reload();
+    // });
+  </script>
+  <script src="main.js"></script>
+ 
+</body>
+</html>

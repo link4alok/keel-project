@@ -1,0 +1,84 @@
+/**
+ * headertemplate.scss
+ * Generates stylesheet for the Header widget.
+ *
+ * @author Ravi Tripathi
+ */
+
+$border : 1px solid black;
+$sizeMain : 1.0037500100376em;
+$Decorate : none;
+$rt : right;
+$headerFont : 'Arial', Regular;
+$Block : inline-block;
+$bl : blue;
+$fColor : #000000;
+$headFontSt : italic;
+$relFont : 0.938em;
+$pad : 10px;
+$boldFont: bold;
+$signOutBtn : 10px;
+
+#userHeader{
+	width: 100%;
+	border:$border;
+	color: $fColor;
+	height:40px;
+	padding : $pad;
+	font-family: $headerFont;
+	
+}
+#title{
+	display : $Block;
+	font-weight: $boldFont;
+	font-size: 1.3em;
+}
+#nameDiv{
+	float : $rt;
+	display: $Block;
+}
+#userName{
+	font-style: $headFontSt;
+	padding : 10px;
+	font-size: 1.1em;
+	margin : 0px 10px 0px 0px auto;
+	font-weight : $boldFont;
+}
+#signOut{
+
+	text-decoration: $Decorate;
+	color: $bl;
+	font-size: 1.1em;
+	font-family: $headerFont;
+}
+#headerDiv{
+	width: 100%;
+}
+#order-table-page{
+	width: 100%;
+}
+
+@media screen and (max-width: 480px ) and (min-width: 0px ){
+	#order-table-page {
+		padding: 0px;
+	}
+	#userHeader{
+		font-size: $relFont;
+		height:40px;
+	}
+	#title{
+		font-size: 1em;
+	}
+	#signOut{
+		font-size: .9em;
+	}
+	#userName{
+		font-size: 1em;
+		padding : 10px;
+		font-weight : $boldFont;
+	}
+	#nameDiv{
+	float : $rt;
+	}
+	
+}
